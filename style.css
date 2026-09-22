@@ -45,7 +45,7 @@ header{
 .logo{
     display: flex;
     justify-content: flex-start;
-    align-items:start;
+    align-items: center;
 }
 
 .logo img{
@@ -108,7 +108,8 @@ section#galvena .kreisa_puse{
         color: var(--teksta_akcents1)
     }
     .akcents2{
-         color: var(--teksta_akcents2)
+         color: var(--teksta_akcents2);
+         font-weight: 400;
     }
     .poga{
         display: block;
@@ -126,15 +127,31 @@ section#galvena .kreisa_puse{
         transition: 0.2s;
     }
 
-     .poga:hover{
+     .poga:hover,.icon:hover{
         background: var(--pogas_fona_krasa_hover);
         transform: translate(0px,-5px);
         transition: 0.5s;
      }
-    .social_pogas{}
+    .social_pogas{
+        display: flex;
+        gap:10px;
+
+        a{
+            color:var( --ikonu_teksta_krasa);
+            text-decoration: none;
+            font-size: 1.3rem;
+            background-color: var(--ikonu_krasa);
+            padding: 10px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:30px;
+            height:30px;
+        }
 
 
-
+    }
 
 }
 
