@@ -1,0 +1,40 @@
+/* Bāzes iestatījumi */
+
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root{
+   
+
+    /* Krāsas */
+    --bazes_teksta_krasa:#0C0F13;
+    --bazes_fona_krasa:#F8F8F8;
+    --bazes_saites_krasa:#0F19DB;
+    --bazes_saites_krasa:#0F19DB;
+    --navigacijas_fona_krasa:#FFFFFF;
+    --pogas_fona_krasa:#0A007C;
+    --pogas_teksta_krasa:#fff;
+    --ikonu_krasa:#000002;
+    --ikonu_teksta_krasa:#05E7FF;
+
+    /* Šrifti */
+    --bazes_fonts:  "Roboto", sans-serif;
+
+
+
+    padding:0;margin: 0;
+    box-sizing: border-box;
+    font-size: 16pt;
+    font-family: var(--bazes_fonts);
+    
+
+
+
+
+
+
+
+
+
+}
