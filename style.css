@@ -13,9 +13,12 @@
     --bazes_saites_krasa:#0F19DB;
     --navigacijas_fona_krasa:#FFFFFF;
     --pogas_fona_krasa:#0A007C;
+    --pogas_fona_krasa_hover:#0f02a3;
     --pogas_teksta_krasa:#fff;
     --ikonu_krasa:#000002;
     --ikonu_teksta_krasa:#05E7FF;
+    --teksta_akcents1:#FF7800;
+    --teksta_akcents2:#7F0403;
 
     /* Šrifti */
     --bazes_fonts:  "Roboto", sans-serif;
@@ -75,8 +78,74 @@ header{
     color:var(--bazes_saites_krasa);
 }
 
-
-
-
-
 /* hederis */
+
+
+/* Sekcija par mani */
+
+section#galvena{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-image: url('./img/fons1.png');
+}
+
+section#galvena .kreisa_puse{
+
+    h1{
+        font-size: 5rem;
+        font-weight: 900;
+        color:var(--bazes_teksta_krasa);
+    }
+    h2{
+        font-size: 3.3rem;
+        font-weight: 200;
+        color:var(--bazes_teksta_krasa);
+    }
+    .akcents1{
+        color: var(--teksta_akcents1)
+    }
+    .akcents2{
+         color: var(--teksta_akcents2)
+    }
+    .poga{
+        display: block;
+        padding: 10px 10px;
+        width: 150px;
+        text-align: center;
+        background: var(--pogas_fona_krasa);
+        color:var(--pogas_teksta_krasa);
+        text-decoration: none;
+        font-weight: 100;
+        border-radius: 30px;
+        box-shadow: 0px 0px 5px var(--bazes_saites_krasa);
+        margin:20px 0px;
+        font-size: 1.3rem;
+        transition: 0.2s;
+    }
+
+     .poga:hover{
+        background: var(--pogas_fona_krasa_hover);
+        transform: translate(0px,-5px);
+        transition: 0.5s;
+     }
+    .social_pogas{}
+
+
+
+
+}
+
+
+section#galvena img{
+    height:300px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px rgb(106, 106, 106);
+}
+
+
+
+
+/* Sekciajs par mani */
