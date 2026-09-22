@@ -11,7 +11,6 @@
     --bazes_teksta_krasa:#0C0F13;
     --bazes_fona_krasa:#F8F8F8;
     --bazes_saites_krasa:#0F19DB;
-    --bazes_saites_krasa:#0F19DB;
     --navigacijas_fona_krasa:#FFFFFF;
     --pogas_fona_krasa:#0A007C;
     --pogas_teksta_krasa:#fff;
@@ -23,7 +22,7 @@
 
 
     box-sizing: border-box;
-    font-size: 16pt;
+    font-size: 14pt;
     font-family: var(--bazes_fonts);
     scroll-behavior: smooth;
 }
@@ -38,6 +37,7 @@ header{
     display: flex;
     justify-content: space-around;
     padding:5px 3rem;
+    background-color: var(--navigacijas_fona_krasa);
 }
 .logo{
     display: flex;
@@ -56,6 +56,22 @@ header{
     margin:0px;
 }
 
+.navigation{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+
+.navigation a{
+    text-decoration: none;
+    color:var(--bazes_teksta_krasa);
+    font-weight: 700;
+}
+.navigation a:hover{
+    color:var(--bazes_saites_krasa);
+}
 
 
 
