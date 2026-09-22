@@ -22,19 +22,42 @@
     --bazes_fonts:  "Roboto", sans-serif;
 
 
-
-    padding:0;margin: 0;
     box-sizing: border-box;
     font-size: 16pt;
     font-family: var(--bazes_fonts);
-    
-
-
-
-
-
-
-
-
-
+    scroll-behavior: smooth;
 }
+
+*{
+    margin:0;padding:0
+    /* atceļam atkāpes visiem elementiem */
+}
+
+/* hederis */
+header{
+    display: flex;
+    justify-content: space-around;
+    padding:5px 3rem;
+}
+.logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items:start;
+}
+
+.logo img{
+    width: 70px;
+    height:70px;
+}
+
+.logo_text{
+    font-size: 3rem;
+    font-weight: 900;
+    margin:0px;
+}
+
+
+
+
+
+/* hederis */
