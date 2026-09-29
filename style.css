@@ -1,365 +1,378 @@
-/* Bāzes iestatījumi */
+/* ==========================================================================
+   BĀZES IESTATĪJUMI UN MAINĪGIE
+   ========================================================================== */
 
-/* Google fonts */
+/* Google fonts - importējam "Roboto" fontu ar dažādiem biezumiem no Google streama */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Globālie CSS mainīgie (krāsas un šrifti) un saknes stili */
+:root {
+    /* Krāsu palete */
+    --bazes_teksta_krasa: #0C0F13;
+    --bazes_fona_krasa: #F8F8F8;
+    --bazes_saites_krasa: #0F19DB;
+    --navigacijas_fona_krasa: #FFFFFF;
+    --pogas_fona_krasa: #0A007C;
+    --pogas_fona_krasa_hover: #0f02a3;
+    --pogas_teksta_krasa: #fff;
+    --ikonu_krasa: #000002;
+    --ikonu_teksta_krasa: #05E7FF;
+    --teksta_akcents1: #FF7800;
+    --teksta_akcents2: #7F0403;
 
-:root{
-   
+    /* Šriftu definīcija */
+    --bazes_fonts: "Roboto", sans-serif;
 
-    /* Krāsas */
-    --bazes_teksta_krasa:#0C0F13;
-    --bazes_fona_krasa:#F8F8F8;
-    --bazes_saites_krasa:#0F19DB;
-    --navigacijas_fona_krasa:#FFFFFF;
-    --pogas_fona_krasa:#0A007C;
-    --pogas_fona_krasa_hover:#0f02a3;
-    --pogas_teksta_krasa:#fff;
-    --ikonu_krasa:#000002;
-    --ikonu_teksta_krasa:#05E7FF;
-    --teksta_akcents1:#FF7800;
-    --teksta_akcents2:#7F0403;
-
-    /* Šrifti */
-    --bazes_fonts:  "Roboto", sans-serif;
-
-
-    box-sizing: border-box;
-    font-size: 14pt;
+    /* Globalie saknes elementa iestatījumi */
+    box-sizing: border-box; /* Ietver padding un border elementa kopējā platumā */
+    font-size: 14pt;         /* Bāzes fonta izmērs visai lapai */
     font-family: var(--bazes_fonts);
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Nodrošina plūstošu ritināšanu uz enkurpaitēm (#) */
 }
 
-*{
-    margin:0;padding:0
-    /* atceļam atkāpes visiem elementiem */
+/* Universālā atiestatīšana (Reset) - noņem noklusējuma iekšējās un ārējās atkāpes */
+* {
+    margin: 0;
+    padding: 0;
 }
 
-/* hederis */
-header{
+
+/* ==========================================================================
+   HEDERIS (Lapais galvene un navigācija)
+   ========================================================================== */
+
+header {
     display: flex;
-    justify-content: space-around;
-    padding:5px 3rem;
+    justify-content: space-around; /* Izlīdzina saturu ar vienmērīgām starpām */
+    padding: 5px 3rem;
     background-color: var(--navigacijas_fona_krasa);
 }
-.logo{
+
+/* Logo konteiners */
+.logo {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: center; /* Vertikāli nocentrē bildi un tekstu */
 }
 
-.logo img{
+.logo img {
     width: 70px;
-    height:70px;
+    height: 70px;
 }
 
-.logo_text{
+.logo_text {
     font-size: 3rem;
     font-weight: 900;
-    margin:0px;
+    margin: 0px;
 }
 
-.navigation{
+/* Navigācijas saišu bloks */
+.navigation {
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:20px;
+    gap: 20px; /* Atstarpe starp navigācijas saitēm */
 }
 
-.navigation a{
-    text-decoration: none;
-    color:var(--bazes_teksta_krasa);
+.navigation a {
+    text-decoration: none; /* Noņem pasvītrojumu saitēm */
+    color: var(--bazes_teksta_krasa);
     font-weight: 700;
     display: block;
     padding: 10px;
 }
-.navigation a:hover{
-    color:var(--bazes_saites_krasa);
+
+/* Navigācijas saites efekts uzbīdot peli */
+.navigation a:hover {
+    color: var(--bazes_saites_krasa);
 }
 
-/* hederis */
 
+/* ==========================================================================
+   GALVENĀ SEKCIJA (Hero / Par mani)
+   ========================================================================== */
 
-/* Sekcija par mani */
-
-section#galvena{
+section#galvena {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding-top: 50px;
     padding-bottom: 50px;
-    background-image: url('./img/fons1.png');
+    background-image: url('./img/fons1.png'); /* Sekcijas fona attēls */
 }
 
-section#galvena .kreisa_puse{
+/* CSS Ligzdošana (Nesting) kreisās puses saturam */
+section#galvena .kreisa_puse {
 
-    h1{
+    h1 {
         font-size: 5rem;
         font-weight: 900;
-        color:var(--bazes_teksta_krasa);
+        color: var(--bazes_teksta_krasa);
     }
-    h2{
+    
+    h2 {
         font-size: 3.3rem;
         font-weight: 200;
-        color:var(--bazes_teksta_krasa);
+        color: var(--bazes_teksta_krasa);
     }
-    .akcents1{
-        color: var(--teksta_akcents1)
+
+    /* Akcenta klases tekstam */
+    .akcents1 {
+        color: var(--teksta_akcents1);
     }
-    .akcents2{
-         color: var(--teksta_akcents2);
-         font-weight: 400;
+    
+    .akcents2 {
+        color: var(--teksta_akcents2);
+        font-weight: 400;
     }
-    .poga{
+
+    /* Galvenās aicinājuma (CTA) pogas noformējums */
+    .poga {
         display: block;
         padding: 10px 10px;
         width: 150px;
         text-align: center;
         background: var(--pogas_fona_krasa);
-        color:var(--pogas_teksta_krasa);
+        color: var(--pogas_teksta_krasa);
         text-decoration: none;
         font-weight: 100;
-        border-radius: 30px;
+        border-radius: 30px; /* Noapaļoti stūri */
         box-shadow: 0px 0px 5px var(--bazes_saites_krasa);
-        margin:20px 0px;
+        margin: 20px 0px;
         font-size: 1.3rem;
-        transition: 0.2s;
+        transition: 0.2s; /* Plūstoša pāreja animācijai */
     }
 
-    .fa-regular{
+    /* Atstarpe ikonas un teksta starpā pogā */
+    .fa-regular {
         margin-left: 10px;
     }
 
-     .poga:hover,.icon:hover{
+    /* Pogas un ikonu interaktivitāte (hover efekts) */
+    .poga:hover, .icon:hover {
         background: var(--pogas_fona_krasa_hover);
-        transform: translate(0px,-5px);
+        transform: translate(0px, -5px); /* Viegla pacelšanās uz augšu */
         transition: 0.5s;
-     }
-    .social_pogas{
-        display: flex;
-        gap:10px;
+    }
 
-        a{
-            color:var( --ikonu_teksta_krasa);
+    /* Sociālo tīklu ikonu pogas */
+    .social_pogas {
+        display: flex;
+        gap: 10px;
+
+        a {
+            color: var(--ikonu_teksta_krasa);
             text-decoration: none;
             font-size: 1.3rem;
             background-color: var(--ikonu_krasa);
             padding: 10px;
-            border-radius: 50%;
+            border-radius: 50%; /* Padara pogas par apaļiem apļiem */
             display: flex;
             justify-content: center;
             align-items: center;
-            width:30px;
-            height:30px;
+            width: 30px;
+            height: 30px;
         }
-
-
     }
+}
 
+/* Profila / galvenā attēla stili sekcijā */
+section#galvena img {
+    height: 300px;
+    border-radius: 50%; /* Apaļš attēls */
+    box-shadow: 0px 0px 20px rgb(106, 106, 106); /* Viegla ēna apkārt */
 }
 
 
-section#galvena img{
-    height:300px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 20px rgb(106, 106, 106);
-}
+/* ==========================================================================
+   PAKALPOJUMU SEKCIJA
+   ========================================================================== */
 
-/* sekcijas pakalpojumi */
-  
-section#pakalpojumi{
-    margin-top:50px;
+section#pakalpojumi {
+    margin-top: 50px;
 
-    h2{
+    /* Sekcijas virsraksts */
+    h2 {
         text-align: center;
-        color:#E66845;
+        color: #E66845;
         font-size: 2.5rem;
     }
 
-    h2::after{
+    /* Dekoratīvā līnija zem virsraksta */
+    h2::after {
         content: "";
         display: block;
         background-color: #E66845;
-        width:60px;
+        width: 60px;
         height: 3px;
         margin: 30px auto;
     }
 
-    .pakalpojumu_kartites{ 
-        /* ar FLEX */
-        width:calc(300px * 4);
-        margin:auto;
+    /* Kartīšu izkārtojums izmantojot Flexbox (PIEZĪME: zemāk esošais Grid to pārraksta) */
+    .pakalpojumu_kartites { 
+        width: calc(300px * 4);
+        margin: auto;
         display: flex;
         flex-wrap: wrap;
-        gap:20px;
+        gap: 20px;
         justify-content: center;
-        
     }
 
-    .pakalpojumu_kartites{
-        /* ar grid */
+    /* Kartīšu izkārtojums izmantojot CSS Grid (aktīvais stils) */
+    .pakalpojumu_kartites {
         display: grid;
-        grid-template-columns: auto auto auto;
-        gap:20px;
+        grid-template-columns: auto auto auto; /* 3 kolonnu izkārtojums */
+        gap: 20px;
         justify-content: center;
     }
 
-
-
-    .card{
-        width:300px;
-        height:350px;
+    /* Atsevišķas pakalpojumu kartītes dizains */
+    .card {
+        width: 300px;
+        height: 350px;
         border: 1px solid #d2a989;
-        padding:10px;
+        padding: 10px;
         padding-top: 20px;
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        flex-direction: column;
+        flex-direction: column; /* Sakārto elementus vertikāli vienu zem otra */
         transition: 0.2s;
 
-
-        .ikona{
+        .ikona {
             font-size: 3rem;
-            color:#A3836B;
-            margin:20px;
+            color: #A3836B;
+            margin: 20px;
         }
-        h3{
+
+        h3 {
             font-size: 1.3rem;
             text-transform: uppercase;
-            color:#79614f;
+            color: #79614f;
             text-align: center;
-        }
-        p{
-            margin-top:20px;
-            color:#2a221b;
-            text-align: center;
-            
         }
 
+        p {
+            margin-top: 20px;
+            color: #2a221b;
+            text-align: center;
+        }
     }
-    .card:hover{
+
+    /* Kartītes interaktivitāte - uzbīdot peli, maina fonu un visu tekstus uz baltu */
+    .card:hover {
         cursor: pointer;
         background-color: #2a221b;
         transition: 0.5s;
-        *{
-            color:white !important
+
+        /* Pārraksta visu iekšējo elementu krāsu uz baltu */
+        * {
+            color: white !important;
         }
     }
-
-
-
 }
 
 
-/* sekcijas pakalpojumi */
+/* ==========================================================================
+   SEKCIJA PAR MANI
+   ========================================================================== */
 
+section#par_mani {
+    margin-top: 50px;
 
-/* Sekcija par mani */
-
-section#par_mani{
-    margin-top:50px;
-
-    h2{
+    h2 {
         text-align: center;
-        color:#E66845;
+        color: #E66845;
         font-size: 2.5rem;
     }
 
-    h2::after{
+    /* Dekoratīvā līnija zem virsraksta */
+    h2::after {
         content: "";
         display: block;
         background-color: #E66845;
-        width:60px;
+        width: 60px;
         height: 3px;
         margin: 30px auto;
     }
 
-
-
-
-    /* Šeit nāks citu elementu noformējums */
-
-
-
+    /* Šeit paredzēts pievienot papildu stilus nākotnē */
 }
 
 
-/* Sekcija par mani */
+/* ==========================================================================
+   KĀJENE (Footer - Kontakti un autortiesības)
+   ========================================================================== */
 
-
-
-
-
-
-
-footer{
-    
+footer {
     background-color: #2E3436;
-    color:white;
+    color: white;
 
-    .footer_augsa{
+    /* Kājienes augšējā daļa saziņai un formai */
+    .footer_augsa {
         display: flex;
         justify-content: center;
-        padding:50px;
+        padding: 50px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.214); /* Gaismu daliņlīnija */
     }
 
-    .pa-kreisi{
+    /* Kājienes kreisā puse (piemēram, kontaktinformācijai) */
+    .pa-kreisi {
         width: 50%;
 
-        h3{
-            margin-bottom:30px;
+        h3 {
+            margin-bottom: 30px;
         }
-
     }
 
-    .pa_labi{
-         width: 50%;
-          h3{
-            margin-bottom:30px;
-          }
+    /* Kājienes labā puse (ziņojumu/kontaktu formai) */
+    .pa_labi {
+        width: 50%;
 
-          form{
-            
-            .formas_elements{
-                margin:10px 0px;
+        h3 {
+            margin-bottom: 30px;
+        }
+
+        /* Saziņas formas stili */
+        form {
+            .formas_elements {
+                margin: 10px 0px;
             }
 
-            input,textarea,button{
+            /* Ievades lauku, teksta laukuma un pogas kopējie stili */
+            input, textarea, button {
                 display: block;
                 font-size: 1rem;
                 padding: 5px 10px;
-                width:300px;
-                border:none;
+                width: 300px;
+                border: none;
+                font-family: "Roboto", sans-serif;
                 border-radius: 4px;
-                resize: none;
+                resize: none; /* Neļauj lietotājam mainīt textarea izmēru */
                 box-sizing: border-box; 
                 background-color: #fcfbfbd5;  
             }
 
-            input:focus-visible,textarea:focus-visible{
-                    background-color: #fff;  
-                    transition: 0.3s;
-                    outline: 2px solid #E66845;
-
+            /* Efekts, kad ievades laukā tiek ievadīts teksts (fokuss) */
+            input:focus-visible, textarea:focus-visible {
+                background-color: #fff;  
+                transition: 0.3s;
+                outline: 2px solid #E66845; /* Izceļ aktīvo lauku ar oranžu apmali */
             }
 
-            button:hover{
-                    background-color: #fff;  
-                    transition: 0.3s;
-                    cursor: pointer;
+            /* Nosūtīšanas pogas stils, uzbīdot peli */
+            button:hover {
+                background-color: #fff;  
+                transition: 0.3s;
+                cursor: pointer;
             }
-
-
-          }
-
+        }
     }
 
-    .footer_apaksa{
+    /* Kājienes apakšējā daļa (Autortiesību paziņojumam) */
+    .footer_apaksa {
         text-align: center;
-        padding:20px;
+        padding: 20px;
     }
-
-
 }
