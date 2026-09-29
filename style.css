@@ -186,15 +186,41 @@ section#pakalpojumi{
         margin: 30px auto;
     }
 
+    .pakalpojumu_kartites{ 
+        /* ar FLEX */
+        width:calc(300px * 4);
+        margin:auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap:20px;
+        justify-content: center;
+        
+    }
+
+    .pakalpojumu_kartites{
+        /* ar grid */
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap:20px;
+        justify-content: center;
+    }
 
 
 
     .card{
         width:300px;
-        height:250px;
-        border: 2px solid #A3836B;
+        height:350px;
+        border: 1px solid #d2a989;
+        padding:10px;
+        padding-top: 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        transition: 0.2s;
 
-        .fa-brands{
+
+        .ikona{
             font-size: 3rem;
             color:#A3836B;
             margin:20px;
@@ -203,8 +229,23 @@ section#pakalpojumi{
             font-size: 1.3rem;
             text-transform: uppercase;
             color:#79614f;
+            text-align: center;
+        }
+        p{
+            margin-top:20px;
+            color:#2a221b;
+            text-align: center;
+            
         }
 
+    }
+    .card:hover{
+        cursor: pointer;
+        background-color: #2a221b;
+        transition: 0.5s;
+        *{
+            color:white !important
+        }
     }
 
 
