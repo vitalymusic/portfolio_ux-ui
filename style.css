@@ -166,7 +166,72 @@ section#galvena img{
     box-shadow: 0px 0px 20px rgb(106, 106, 106);
 }
 
+/* sekcijas pakalpojumi */
+  
+section#pakalpojumi{
+    margin-top:50px;
+
+    h2{
+        text-align: center;
+        color:#E66845;
+        font-size: 2.5rem;
+    }
+
+    h2::after{
+        content: "";
+        display: block;
+        background-color: #E66845;
+        width:60px;
+        height: 3px;
+        margin: 30px auto;
+    }
+
+
+
+
+    .card{
+        width:300px;
+        height:250px;
+        border: 2px solid #A3836B;
+
+        .fa-brands{
+            font-size: 3rem;
+            color:#A3836B;
+            margin:20px;
+        }
+        h3{
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            color:#79614f;
+        }
+
+    }
+
+
+
+}
+
+
+
+
+
+
+/* sekcijas pakalpojumi */
+
+
+
+
+
+
+
+
+
 /* Sekcija par mani */
+
+
+
+
+
 
 
 footer{
