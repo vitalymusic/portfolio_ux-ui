@@ -127,6 +127,10 @@ section#galvena .kreisa_puse{
         transition: 0.2s;
     }
 
+    .fa-regular{
+        margin-left: 10px;
+    }
+
      .poga:hover,.icon:hover{
         background: var(--pogas_fona_krasa_hover);
         transform: translate(0px,-5px);
@@ -162,7 +166,9 @@ section#galvena img{
     box-shadow: 0px 0px 20px rgb(106, 106, 106);
 }
 
+/* Sekcija par mani */
 
 
-
-/* Sekciajs par mani */
+footer{
+    
+}
