@@ -382,8 +382,29 @@ footer {
 
 /* Tablet 768px */
 @media (max-width:768px){
+    :root{
+         font-size: 10pt; 
+
+    }
+
 body{
     
+
+}
+
+.logo{
+    transform: scale(0.7);
+}
+
+
+section#galvena{
+    .kreisa_puse{
+        transform: scale(0.7);
+    }
+
+    .laba_puse{
+        transform: scale(0.7);
+    }
 
 }
 
@@ -391,19 +412,71 @@ body{
     width: 100% !important;
     grid-template-columns: auto auto !important;
 }
+/* Izlabot sadaļu par mani */
+
+
+
+
+
 
 }
+
 
 
 
 /* Mobile 320px */
 
 @media (max-width:320px){
+      :root{
+         font-size: 10pt; 
+
+    }
+
+    header{
+        flex-direction: column;
+        .navigation{
+            width:100%;
+        }
+    }
+
+    section#galvena{
+         flex-direction: column;
+         justify-content: flex-start;
+         padding:0px 10px;
+
+        /* .kreisa_puse{
+            transform: scale(0.5);
+        } */
+
+        .laba_puse{
+            margin-top:-75px;
+
+        }
+
+}
     
     .pakalpojumu_kartites {
     width: 100% !important;
     grid-template-columns: auto !important;
 
+}
+
+.footer_augsa{
+    flex-direction: column;
+    padding: 10px !important;
+
+    .pa-kreisi{
+        width: 100%;
+    }
+
+    .pa_labi{
+         width: 100%;
+         padding:0px 10px;
+
+         input,textarea,button{
+            width:100%;
+         }
+    }
 }
 
 }
