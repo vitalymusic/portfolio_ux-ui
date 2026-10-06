@@ -376,3 +376,34 @@ footer {
         padding: 20px;
     }
 }
+
+
+
+
+/* Tablet 768px */
+@media (max-width:768px){
+body{
+    
+
+}
+
+.pakalpojumu_kartites {
+    width: 100% !important;
+    grid-template-columns: auto auto !important;
+}
+
+}
+
+
+
+/* Mobile 320px */
+
+@media (max-width:320px){
+    
+    .pakalpojumu_kartites {
+    width: 100% !important;
+    grid-template-columns: auto !important;
+
+}
+
+}
