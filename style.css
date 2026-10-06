@@ -429,11 +429,12 @@ section#galvena{
 @media (max-width:320px){
       :root{
          font-size: 10pt; 
-
     }
 
     header{
         flex-direction: column;
+        padding:0px 5px;
+
         .navigation{
             width:100%;
         }
@@ -459,10 +460,15 @@ section#galvena{
     width: 100% !important;
     grid-template-columns: auto !important;
 
+    .card{
+        transform: scale(0.95);
+    }
+
 }
 
 .footer_augsa{
     flex-direction: column;
+    gap:20px;
     padding: 10px !important;
 
     .pa-kreisi{
@@ -471,7 +477,6 @@ section#galvena{
 
     .pa_labi{
          width: 100%;
-         padding:0px 10px;
 
          input,textarea,button{
             width:100%;
