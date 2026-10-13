@@ -387,10 +387,6 @@ footer {
 
     }
 
-body{
-    
-
-}
 
 .logo{
     transform: scale(0.7);
@@ -411,6 +407,11 @@ section#galvena{
 .pakalpojumu_kartites {
     width: 100% !important;
     grid-template-columns: auto auto !important;
+
+    .card{
+        width:200px !important;
+        height: auto !important;
+    }
 }
 /* Izlabot sadaļu par mani */
 
