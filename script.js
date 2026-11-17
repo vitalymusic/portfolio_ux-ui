@@ -24,3 +24,42 @@ $('#closeDialogBtn').click((e)=>{
       $(this).toggle(itemText.indexOf(searchTerm) > -1);
     });
   });
+
+//   Fona kustināšana
+
+function moveBackground(pikseli,sekundes){
+    let section = $('#galvena');
+
+    let x = (Math.random()*pikseli).toFixed(0);
+    let y = (Math.random()*pikseli).toFixed(0);
+
+    section.css('background-position',`${x}px ${y}px`); 
+    section.css('transition',`${sekundes}s linear`);  
+
+}
+
+setInterval(()=>{moveBackground(100,5)},5000);
+
+
+
+$("#contactForm").validate({
+    rules:{
+        name:"required",
+        email:{
+                required:true,
+                email:true
+            },
+        message:{
+            required:true,
+            minlength: 5
+
+        }    
+    },
+    messages: {
+         name:"Ierakstiet savu vārdu",
+         email:"Ierakstiet savu epastu",
+         message:"Ierakstiet ziņu"
+    }    
+
+})
+
